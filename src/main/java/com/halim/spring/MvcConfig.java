@@ -17,6 +17,7 @@ public class MvcConfig implements WebMvcConfigurer {
 	@Override
     public void addViewControllers(ViewControllerRegistry registry) {
 		 registry.addViewController("/addProduct.html");
+		 registry.addViewController("/index.html");
 	      
     	
 	}
@@ -27,13 +28,17 @@ public class MvcConfig implements WebMvcConfigurer {
         		"/css/**",
                 "/resources/**",
                 "/js/**",
-                "/images/**"
+                "/images/**",
+                "/api/**",
+                "/font-awesome/**"
                
                )
 		        .addResourceLocations(
         		   "classpath:/static/css/",
         		   "classpath:/static/js/",
         		   "classpath:/static/images/",
-                   "classpath:/resources/");
+        		   "classpath:/static/api/",
+                   "classpath:/resources/",
+                   "classpath:/static/font-awesome/");
 	}
 }
